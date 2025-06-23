@@ -20,10 +20,10 @@ for row in cursor:
     print(row)
 
 
-conn.execute("UPDATE students SET age = 23 WHERE name = 'Bob'")
+conn.execute("UPDATE students SET age = 23 WHERE name = 'gaurav'")
 
 # Delete Charlie
-conn.execute("DELETE FROM students WHERE name = 'Charlie'")
+conn.execute("DELETE FROM students WHERE name = 'pawan'")
 
 # Show updated list
 print("\nAfter changes:")
