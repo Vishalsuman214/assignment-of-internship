@@ -1,18 +1,18 @@
 import pandas as pd
 
 #dataframe with a two dimensional list
-list=[[1,'pawan'],[2,'sachin'],[3,'sanjay'],[4,'prashant'],[5,'priyanka']]
+list=[[1,'rahul'],[2,'priya'],[3,'ram'],[4,'prashant'],[5,'priyanka']]
 df = pd.DataFrame(list, columns=['id', 'name'])
 print(df)
 
 
 #dataframe with a dictionary
-dict={'name':['pawan','sachin','sanjay','prashant','priyanka'],'age':[20,21,22,23,24],'city':['delhi','mumbai','pune','bangalore','hyderabad']}
+dict={'name':['rahul','priya','ram','shubham','priyanka'],'age':[20,21,22,23,24],'city':['delhi','mumbai','pune','bangalore','hyderabad']}
 df2 = pd.DataFrame(dict)
 print("\n", df2)
 
 #using list if lists
-list=[['pawan',20,'delhi'],['sachin',21,'mumbai'],['sanjay',22,'pune'],['prashant',23,'bangalore'],['priyanka',24,'hyderabad']]
+list=[['rahul',20,'delhi'],['ram',21,'mumbai'],['shubham',22,'pune'],['prashant',23,'bangalore'],['priyanka',24,'hyderabad']]
 df3 = pd.DataFrame(list, columns=['name', 'age', 'city'])
 print("\n", df3)
 
