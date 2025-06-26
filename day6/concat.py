@@ -16,3 +16,14 @@ print(concatenated_df)
 merged_df = pd.merge(concatenated_df, df3, on='id', how='outer')
 print("\nMerged DataFrame:")
 print(merged_df)
+
+
+
+# merge() offers more explicit control over the join keys (columns or indices) and defaults to an inner join.
+# merge() more flaxible
+# it combine columns
+
+
+#join() defaults to index-based joining and performs a left join by default, making it convenient when indices are the natural join keys
+# join() index-based 
+# it combine index
