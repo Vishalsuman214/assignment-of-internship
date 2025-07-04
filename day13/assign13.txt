@@ -1,0 +1,129 @@
+Q1.
+mysql> SELECT COUNT(*) AS total_users FROM clique_bait.users;
++-------------+
+| total_users |
++-------------+
+|          10 |
++-------------+
+
+-------------------------------------------------------------------------------------------
+Q2.
+mysql> SELECT COUNT(DISTINCT cookie_id) / COUNT(DISTINCT user_id) AS avg_cookies_per_user
+    -> FROM clique_bait.users;
++----------------------+
+| avg_cookies_per_user |
++----------------------+
+|               1.0000 |
++----------------------+
+---------------------------------------------------------------------------------------------
+
+Q3.
+mysql> SELECT
+    ->   DATE_FORMAT(event_time, '%Y-%m') AS month,
+    ->   COUNT(DISTINCT visit_id) AS unique_visits
+    -> FROM clique_bait.events
+    -> GROUP BY month
+    -> ORDER BY month;
++---------+---------------+
+| month   | unique_visits |
++---------+---------------+
+| 2020-01 |             4 |
+| 2020-02 |             3 |
+| 2020-03 |             2 |
+| 2020-04 |             1 |
++---------+---------------+
+------------------------------------------------------------------------------------------------
+Q4
+
+mysql> SELECT ei.event_name, COUNT(*) AS event_count
+    -> FROM clique_bait.events e
+    -> JOIN clique_bait.event_identifier ei ON e.event_type = ei.event_type
+    -> GROUP BY ei.event_name;
++-------------+-------------+
+| event_name  | event_count |
++-------------+-------------+
+| Page View   |           8 |
+| Add to Cart |           2 |
++-------------+-------------+
+-------------------------------------------------------------------------------------------------
+Q5.
+
+mysql> SELECT
+    ->   ROUND(
+    ->     100.0 * COUNT(DISTINCT CASE WHEN event_type = 3 THEN visit_id END) / COUNT(DISTINCT visit_id),
+    ->     2
+    ->   ) AS purchase_event_percentage
+    -> FROM clique_bait.events;
++---------------------------+
+| purchase_event_percentage |
++---------------------------+
+|                      0.00 |
++---------------------------+
+---------------------------------------------------------------------------------------------------
+Q6.
+
+mysql> SELECT
+    ->   ROUND(
+    ->     100.0 * COUNT(DISTINCT e1.visit_id) / COUNT(DISTINCT e2.visit_id),
+    ->     2
+    ->   ) AS checkout_without_purchase_percentage
+    -> FROM clique_bait.events e1
+    -> JOIN clique_bait.page_hierarchy ph ON e1.page_id = ph.page_id
+    -> LEFT JOIN (
+    ->   SELECT DISTINCT visit_id
+    ->   FROM clique_bait.events
+    ->   WHERE event_type = 3
+    -> ) e2 ON e1.visit_id = e2.visit_id
+    -> WHERE ph.page_name = 'Checkout' AND e2.visit_id IS NULL;
++--------------------------------------+
+| checkout_without_purchase_percentage |
++--------------------------------------+
+|                                 NULL |
++--------------------------------------+
+--------------------------------------------------------------------------------------------
+Q7.
+
+mysql> SELECT ph.page_name, COUNT(*) AS views
+    -> FROM clique_bait.events e
+    -> JOIN clique_bait.page_hierarchy ph ON e.page_id = ph.page_id
+    -> WHERE e.event_type = 1  -- Page View
+    -> GROUP BY ph.page_name
+    -> ORDER BY views DESC
+    -> LIMIT 3;
++----------------+-------+
+| page_name      | views |
++----------------+-------+
+| Russian Caviar |     2 |
+| Home Page      |     1 |
+| Kingfish       |     1 |
++----------------+-------+
+------------------------------------------------------------------------------------------
+Q8.
+
+mysql> SELECT
+    ->   ph.product_category,
+    ->   SUM(CASE WHEN e.event_type = 1 THEN 1 ELSE 0 END) AS views,
+    ->   SUM(CASE WHEN e.event_type = 2 THEN 1 ELSE 0 END) AS cart_adds
+    -> FROM clique_bait.events e
+    -> JOIN clique_bait.page_hierarchy ph ON e.page_id = ph.page_id
+    -> WHERE ph.product_category IS NOT NULL
+    -> GROUP BY ph.product_category;
++------------------+-------+-----------+
+| product_category | views | cart_adds |
++------------------+-------+-----------+
+| Fish             |     2 |         2 |
+| Luxury           |     3 |         0 |
+| Shellfish        |     2 |         0 |
++------------------+-------+-----------+
+---------------------------------------------------------------------------------------------------
+Q9.
+
+mysql> SELECT ph.page_name AS product_name, COUNT(*) AS purchase_count
+    -> FROM clique_bait.events e
+    -> JOIN clique_bait.page_hierarchy ph ON e.page_id = ph.page_id
+    -> WHERE e.event_type = 3
+    -> GROUP BY ph.page_name
+    -> ORDER BY purchase_count DESC
+    -> LIMIT 3;
+
+
