@@ -1,0 +1,5 @@
+﻿ProcessName,RawTableName,RawTableCol,RawTableDatatype,Logic,CuratedTableName,CuratedTableCol,CuratedDatatype
+userinfo,user,Id,string,ID is not NULL,curr.user,Id,string
+userinfo,user,Name,string,,curr.user,Name,string
+salesinfo,sales,Id,string,,curr.sales,Id,string
+salesinfo,sales,Date,Date,,curr.sales,Date,Date
