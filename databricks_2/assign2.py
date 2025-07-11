@@ -1,3 +1,7 @@
+df=spark.read.table("default.thursday")
+df.display()
+spark.sql("SHOW CATALOGS").show()
+
 dbutils.widgets.text("ProcessName","")
 input_process=dbutils.widgets.get("ProcessName")
 
@@ -55,7 +59,7 @@ for table_name in logics:
     select_expr = ", ".join(logic_exprs)
     spark.sql(f"""
         INSERT OVERWRITE TABLE curated.{table_name}
-        SELECT {select_expr}
+        SELECT *
         FROM raw.{table_name}
         WHERE {logics[table_name]['Id']}
     """)
