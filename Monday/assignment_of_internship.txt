@@ -1,0 +1,109 @@
+
+This script performs the following analyses:
+1. Processes sales data to filter and transform relevant information
+2. Analyzes employee data for attrition patterns
+3. Stores results in Delta tables for version control and efficient querying
+"""
+
+# 1. SALES DATA PROCESSINNG
+
+# Read sales data from CSV file
+# Source: /Volumes/workspace/default/skit_assignment/Sales.csv
+df = spark.read.csv('/Volumes/workspace/default/skit_assignment/Sales.csv', 
+                   inferSchema=True, 
+                   header=True)
+display(df)
+
+-----------------------------------------------------------------------------------------
+
+# Display sample of 10 records for initial data inspection
+display(df.limit(10))
+
+
+-----------------------------------------------------------------------------------------
+
+# Filter sales data to include only high-value transactions (SALES > 1000)
+filtered_df = df.filter(df["SALES"] > 1000)
+display(filtered_df)
+
+--------------------------------------------------------------------------------------------------------------
+
+# Select relevant columns for analysis: location and contact information
+select_columns = ['CITY','STATE','POSTALCODE','COUNTRY','CONTACTLASTNAME']
+transformed_df = filtered_df.select(*select_columns)
+display(transformed_df)
+-----------------------------------------------------------------------------------------------------------------
+
+# Store transformed sales data in Delta table for future analysis
+transformed_df.write.format("delta").mode("append").saveAsTable("default.agg_sales_data")
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+# Verify data was written correctly
+display(spark.table("default.agg_sales_data"))
+
+---------------------------------------------------------------------------------------------------------------------
+
+# Check version history of the Delta table
+history_df = spark.sql("DESCRIBE HISTORY default.agg_sales_data")
+display(history_df)
+
+---------------------------------------------------------------------------------------------------------------------
+
+# Read specific version (version 0) of the Delta table for comparison
+version_df = spark.read.format("delta").option("versionAsOf", 0).table("default.agg_sales_data")
+display(version_df)
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+# 2. EMPLOYEE DATA ANALYSIS
+
+# Read employee data from CSV file
+# Source: /Volumes/workspace/default/skit_assignment/Employee.csv
+emp_df = spark.read.csv("/Volumes/workspace/default/skit_assignment/Employee.csv", 
+                       header=True, 
+                       inferSchema=True)
+display(emp_df)
+----------------------------------------------------------------------------------------------------------------------
+
+# Filter employees with high attrition risk and job satisfaction
+# Criteria: Attrition = "Yes" AND JobSatisfaction > 3
+filtered_emp_df = emp_df.filter(
+    (col("Attrition") == "Yes") & (col("JobSatisfaction") > 3)
+)
+display(filtered_emp_df)
+
+-------------------------------------------------------------------------------------------------------------------------
+
+# Store high-risk employee data with department partitioning
+# Location: /Volumes/workspace/default/skit_assignment/transformed_data/high_attrition_risk_employees
+filtered_emp_df.write.format("delta") \
+    .mode("overwrite") \
+    .partitionBy("Department") \
+    .save("/Volumes/workspace/default/skit_assignment/transformed_data/high_attrition_risk_employees")
+----------------------------------------------------------------------------------------------------------------------------
+
+
+ANALYSIS FINDINGS AND INSIGHTS =>
+
+
+Sales Data:
+- Found [X] high-value transactions (SALES > 1000)
+- Most high-value customers concentrated in [City/State] area
+- Postal code analysis shows [observation about distribution]
+
+--------------------------------------------------------------------------------------------------------------------------------
+Employee Data:
+- Identified [Y] employees at high attrition risk (Attrition = "Yes")
+- Surprisingly, these employees had JobSatisfaction > 3, suggesting:
+  - Possible disconnect between satisfaction surveys and actual retention
+  - Other factors (compensation, growth opportunities) may be driving attrition
+- Department [Name] showed highest concentration of at-risk employees
+---------------------------------------------------------------------------------------------------------------------------------
+
+Recommendations:
+1. For Sales: Focus marketing efforts in [high-value regions]
+2. For HR: Conduct exit interviews with high-satisfaction attriters to understand paradox
+3. Implement department-specific retention programs, especially for [Department Name]
