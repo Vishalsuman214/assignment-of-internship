@@ -1,0 +1,10 @@
+current_df = spark.table("scd.bookings_filtered")
+display(current_df)
+
+
+current2_df = spark.table("scd.bookings2_filtered")
+display(current2_df)
+
+
+merge_df = current_df.join(current2_df, on="booking_id", how="left")  
+display(merge_df)
