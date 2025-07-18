@@ -1,0 +1,128 @@
+from pyspark.sql.functions import col, to_date, datediff, current_date, regexp_replace, lit
+from pyspark.sql.types import DateType
+from datetime import datetime
+
+# Read JSON data with error handling
+raw_customer_df = spark.read \
+    .option("mode", "PERMISSIVE") \
+    .option("multiLine", True) \
+    .json("/Volumes/workspace/intern/raw_data/zoom_car_customers_20250719.json")
+display(raw_customer_df.limit(5))
+
+
+from pyspark.sql.functions import col, regexp_extract, when
+
+# Assuming raw_customers_df is already defined and loaded with data
+
+# 2.1 Remove nulls in critical fields
+cleaned_df = raw_customer_df.na.drop(
+    subset=["customer_id", "name", "email", "phone_number"]
+)
+
+# 2.2 Validate email formats
+valid_email_df = cleaned_df.withColumn(
+    "is_valid_email",
+    (regexp_extract(col("email"), "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$", 0) != "")
+).filter(col("is_valid_email"))
+
+# 2.3 Validate status values
+status_valid_df = valid_email_df.withColumn(
+    "status",
+    when(col("status").isin(["active", "inactive"]), col("status"))
+    .otherwise("invalid")
+).filter(col("status") != "invalid")
+
+print(f"Records after all validations: {status_valid_df.count()}")
+
+
+from pyspark.sql.functions import regexp_replace, col, to_date, current_timestamp, length
+
+# 3.1 Standardize phone numbers (remove non-digit characters)
+transformed_df = status_valid_df.withColumn(
+    "phone_number",
+    regexp_replace(col("phone_number"), "[^0-9]", "")
+)
+
+# 3.2 Convert signup_date to proper date type
+final_df = transformed_df.withColumn(
+    "signup_date",
+    to_date(col("signup_date"), "yyyy-MM-dd")
+)
+
+# 3.3 Add audit columns
+processed_df = final_df.withColumn(
+    "processing_timestamp",
+    current_timestamp()
+)
+
+# 3.4 Filter for 10-digit numbers only
+processed_df = processed_df.filter(
+    (length(col("phone_number")) == 10) & 
+    (col("phone_number").rlike("^[0-9]{10}$"))
+)
+
+# Display results
+print(f"Valid 10-digit phone records: {processed_df.count()}")
+display(processed_df.limit(5))
+
+
+
+# Define Delta table path
+delta_table_path = "/Volumes/workspace/default/skit_assignment/staging_customers_delta"
+
+# Write to Delta Lake
+processed_df.write.format("delta") \
+    .mode("overwrite") \
+    .save(delta_table_path)
+
+# Register as SQL table
+display(spark.read.format("delta").load(delta_table_path))
+
+
+# 5.1 Record counts comparison
+print(f"""
+Data Quality Report:
+- Initial records: {raw_customer_df.count()}
+- After null removal: {cleaned_df.count()}
+- Valid emails: {valid_email_df.count()}
+- Valid statuses: {status_valid_df.count()}
+- Final records: {processed_df.count()}
+""")
+
+
+
+
+
+
+
+
+from pyspark.sql.functions import regexp_replace
+
+customer_df = raw_customer_df.withColumn(
+    "phone_normalized",
+    regexp_replace(col("phone_number"), "[^0-9]", "")
+)
+
+# 3. Calculate tenure in days
+from pyspark.sql.functions import datediff, current_date
+
+customers_df = customer_df.withColumn(
+    "tenure_days",
+    datediff(current_date(), col("signup_date"))
+)
+
+# 4. Save transformed data
+customers_df.write.format("delta").mode("overwrite") \
+    .save("/Volumes/workspace/default/skit_assignment/transformed_customers")
+
+
+display(spark.read.format("delta").load("/Volumes/workspace/default/skit_assignment/transformed_customers"))
+
+
+
+
+
+
+
+
+

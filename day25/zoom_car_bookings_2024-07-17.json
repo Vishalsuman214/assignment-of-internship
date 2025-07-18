@@ -1,0 +1,1002 @@
+[
+    {
+        "booking_id": "B001",
+        "customer_id": "C039",
+        "car_id": "CAR314",
+        "booking_date": "2024-07-29",
+        "start_time": "2024-07-29T04:00:00.000Z",
+        "end_time": "2024-07-29T14:00:00.000Z",
+        "total_amount": 305.9,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B002",
+        "customer_id": "C032",
+        "car_id": "CAR202",
+        "booking_date": "2024-07-23",
+        "start_time": "2024-07-23T06:00:00.000Z",
+        "end_time": "2024-07-23T17:00:00.000Z",
+        "total_amount": 117.14,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B003",
+        "customer_id": "C010",
+        "car_id": "CAR998",
+        "booking_date": "2024-07-29",
+        "start_time": "2024-07-29T03:00:00.000Z",
+        "end_time": "2024-07-29T08:00:00.000Z",
+        "total_amount": 370.23,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B004",
+        "customer_id": "C034",
+        "car_id": "CAR266",
+        "booking_date": "2024-07-05",
+        "start_time": "2024-07-05T11:00:00.000Z",
+        "end_time": "2024-07-05T20:00:00.000Z",
+        "total_amount": 458.76,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B005",
+        "customer_id": "C047",
+        "car_id": "CAR404",
+        "booking_date": "2024-07-07",
+        "start_time": "2024-07-07T06:00:00.000Z",
+        "end_time": "2024-07-07T15:00:00.000Z",
+        "total_amount": 242.32,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B006",
+        "customer_id": "C045",
+        "car_id": "CAR707",
+        "booking_date": "2024-07-15",
+        "start_time": "2024-07-15T04:00:00.000Z",
+        "end_time": "2024-07-15T14:00:00.000Z",
+        "total_amount": 461.23,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B007",
+        "customer_id": "C017",
+        "car_id": "CAR177",
+        "booking_date": "2024-07-13",
+        "start_time": "2024-07-13T05:00:00.000Z",
+        "end_time": "2024-07-13T13:00:00.000Z",
+        "total_amount": 378.92,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B008",
+        "customer_id": "C004",
+        "car_id": "CAR174",
+        "booking_date": "2024-07-13",
+        "start_time": "2024-07-13T05:00:00.000Z",
+        "end_time": "2024-07-13T15:00:00.000Z",
+        "total_amount": 180.08,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B009",
+        "customer_id": "C047",
+        "car_id": "CAR242",
+        "booking_date": "2024-07-26",
+        "start_time": "2024-07-26T10:00:00.000Z",
+        "end_time": "2024-07-26T16:00:00.000Z",
+        "total_amount": 247.36,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B010",
+        "customer_id": "C002",
+        "car_id": "CAR985",
+        "booking_date": "2024-07-14",
+        "start_time": "2024-07-14T04:00:00.000Z",
+        "end_time": "2024-07-14T13:00:00.000Z",
+        "total_amount": 418.61,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B011",
+        "customer_id": "C015",
+        "car_id": "CAR866",
+        "booking_date": "2024-07-19",
+        "start_time": "2024-07-19T07:00:00.000Z",
+        "end_time": "2024-07-19T15:00:00.000Z",
+        "total_amount": 366.74,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B012",
+        "customer_id": "C045",
+        "car_id": "CAR722",
+        "booking_date": "2024-07-04",
+        "start_time": "2024-07-04T00:00:00.000Z",
+        "end_time": "2024-07-04T09:00:00.000Z",
+        "total_amount": 255.93,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B013",
+        "customer_id": "C006",
+        "car_id": "CAR841",
+        "booking_date": "2024-07-25",
+        "start_time": "2024-07-25T01:00:00.000Z",
+        "end_time": "2024-07-25T02:00:00.000Z",
+        "total_amount": 422.88,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B014",
+        "customer_id": "C020",
+        "car_id": "CAR307",
+        "booking_date": "2024-07-28",
+        "start_time": "2024-07-28T07:00:00.000Z",
+        "end_time": "2024-07-28T19:00:00.000Z",
+        "total_amount": 225.98,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B015",
+        "customer_id": "C043",
+        "car_id": "CAR301",
+        "booking_date": "2024-07-21",
+        "start_time": "2024-07-21T12:00:00.000Z",
+        "end_time": "2024-07-21T22:00:00.000Z",
+        "total_amount": 360.48,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B016",
+        "customer_id": "C005",
+        "car_id": "CAR745",
+        "booking_date": "2024-07-03",
+        "start_time": "2024-07-03T08:00:00.000Z",
+        "end_time": "2024-07-03T12:00:00.000Z",
+        "total_amount": 466.49,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B017",
+        "customer_id": "C049",
+        "car_id": "CAR799",
+        "booking_date": "2024-07-25",
+        "start_time": "2024-07-25T01:00:00.000Z",
+        "end_time": "2024-07-25T10:00:00.000Z",
+        "total_amount": 109.74,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B018",
+        "customer_id": "C001",
+        "car_id": "CAR653",
+        "booking_date": "2024-07-11",
+        "start_time": "2024-07-11T06:00:00.000Z",
+        "end_time": "2024-07-11T17:00:00.000Z",
+        "total_amount": 129.86,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B019",
+        "customer_id": "C038",
+        "car_id": "CAR157",
+        "booking_date": "2024-07-28",
+        "start_time": "2024-07-28T01:00:00.000Z",
+        "end_time": "2024-07-28T09:00:00.000Z",
+        "total_amount": 118.15,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B020",
+        "customer_id": "C016",
+        "car_id": "CAR460",
+        "booking_date": "2024-07-20",
+        "start_time": "2024-07-20T00:00:00.000Z",
+        "end_time": "2024-07-20T07:00:00.000Z",
+        "total_amount": 368.57,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B021",
+        "customer_id": "C005",
+        "car_id": "CAR509",
+        "booking_date": "2024-07-02",
+        "start_time": "2024-07-02T04:00:00.000Z",
+        "end_time": "2024-07-02T08:00:00.000Z",
+        "total_amount": 465.72,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B022",
+        "customer_id": "C038",
+        "car_id": "CAR830",
+        "booking_date": "2024-07-04",
+        "start_time": "2024-07-04T00:00:00.000Z",
+        "end_time": "2024-07-04T07:00:00.000Z",
+        "total_amount": 270.43,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B023",
+        "customer_id": "C030",
+        "car_id": "CAR534",
+        "booking_date": "2024-07-18",
+        "start_time": "2024-07-18T05:00:00.000Z",
+        "end_time": "2024-07-18T16:00:00.000Z",
+        "total_amount": 223.39,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B024",
+        "customer_id": "C044",
+        "car_id": "CAR421",
+        "booking_date": "2024-07-01",
+        "start_time": "2024-07-01T11:00:00.000Z",
+        "end_time": "2024-07-01T15:00:00.000Z",
+        "total_amount": 415.64,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B025",
+        "customer_id": "C044",
+        "car_id": "CAR247",
+        "booking_date": "2024-07-14",
+        "start_time": "2024-07-14T09:00:00.000Z",
+        "end_time": "2024-07-14T13:00:00.000Z",
+        "total_amount": 422.12,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B026",
+        "customer_id": "C013",
+        "car_id": "CAR893",
+        "booking_date": "2024-07-08",
+        "start_time": "2024-07-08T11:00:00.000Z",
+        "end_time": "2024-07-08T19:00:00.000Z",
+        "total_amount": 356.28,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B027",
+        "customer_id": "C031",
+        "car_id": "CAR431",
+        "booking_date": "2024-07-10",
+        "start_time": "2024-07-10T02:00:00.000Z",
+        "end_time": "2024-07-10T11:00:00.000Z",
+        "total_amount": 123.85,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B028",
+        "customer_id": "C037",
+        "car_id": "CAR692",
+        "booking_date": "2024-07-22",
+        "start_time": "2024-07-22T02:00:00.000Z",
+        "end_time": "2024-07-22T12:00:00.000Z",
+        "total_amount": 289.85,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B029",
+        "customer_id": "C022",
+        "car_id": "CAR179",
+        "booking_date": "2024-07-20",
+        "start_time": "2024-07-20T05:00:00.000Z",
+        "end_time": "2024-07-20T14:00:00.000Z",
+        "total_amount": 319.1,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B030",
+        "customer_id": "C001",
+        "car_id": "CAR461",
+        "booking_date": "2024-07-13",
+        "start_time": "2024-07-13T10:00:00.000Z",
+        "end_time": "2024-07-13T18:00:00.000Z",
+        "total_amount": 445.42,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B031",
+        "customer_id": "C037",
+        "car_id": "CAR549",
+        "booking_date": "2024-07-03",
+        "start_time": "2024-07-03T07:00:00.000Z",
+        "end_time": "2024-07-03T15:00:00.000Z",
+        "total_amount": 472.68,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B032",
+        "customer_id": "C031",
+        "car_id": "CAR557",
+        "booking_date": "2024-07-28",
+        "start_time": "2024-07-28T10:00:00.000Z",
+        "end_time": "2024-07-28T18:00:00.000Z",
+        "total_amount": 134.91,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B033",
+        "customer_id": "C045",
+        "car_id": "CAR458",
+        "booking_date": "2024-07-31",
+        "start_time": "2024-07-31T05:00:00.000Z",
+        "end_time": "2024-07-31T06:00:00.000Z",
+        "total_amount": 207.2,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B034",
+        "customer_id": "C023",
+        "car_id": "CAR115",
+        "booking_date": "2024-07-27",
+        "start_time": "2024-07-27T02:00:00.000Z",
+        "end_time": "2024-07-27T05:00:00.000Z",
+        "total_amount": 219.75,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B035",
+        "customer_id": "C039",
+        "car_id": "CAR987",
+        "booking_date": "2024-07-30",
+        "start_time": "2024-07-30T09:00:00.000Z",
+        "end_time": "2024-07-30T19:00:00.000Z",
+        "total_amount": 369.95,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B036",
+        "customer_id": "C027",
+        "car_id": "CAR827",
+        "booking_date": "2024-07-06",
+        "start_time": "2024-07-06T04:00:00.000Z",
+        "end_time": "2024-07-06T15:00:00.000Z",
+        "total_amount": 321.92,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B037",
+        "customer_id": "C049",
+        "car_id": "CAR129",
+        "booking_date": "2024-07-10",
+        "start_time": "2024-07-10T08:00:00.000Z",
+        "end_time": "2024-07-10T17:00:00.000Z",
+        "total_amount": 161.97,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B038",
+        "customer_id": "C006",
+        "car_id": "CAR650",
+        "booking_date": "2024-07-02",
+        "start_time": "2024-07-02T07:00:00.000Z",
+        "end_time": "2024-07-02T16:00:00.000Z",
+        "total_amount": 219.27,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B039",
+        "customer_id": "C024",
+        "car_id": "CAR746",
+        "booking_date": "2024-07-20",
+        "start_time": "2024-07-20T05:00:00.000Z",
+        "end_time": "2024-07-20T16:00:00.000Z",
+        "total_amount": 461.63,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B040",
+        "customer_id": "C025",
+        "car_id": "CAR103",
+        "booking_date": "2024-07-21",
+        "start_time": "2024-07-21T01:00:00.000Z",
+        "end_time": "2024-07-21T04:00:00.000Z",
+        "total_amount": 114.37,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B041",
+        "customer_id": "C031",
+        "car_id": "CAR905",
+        "booking_date": "2024-07-12",
+        "start_time": "2024-07-12T03:00:00.000Z",
+        "end_time": "2024-07-12T05:00:00.000Z",
+        "total_amount": 431.9,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B042",
+        "customer_id": "C017",
+        "car_id": "CAR283",
+        "booking_date": "2024-07-19",
+        "start_time": "2024-07-19T10:00:00.000Z",
+        "end_time": "2024-07-19T12:00:00.000Z",
+        "total_amount": 396.46,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B043",
+        "customer_id": "C024",
+        "car_id": "CAR718",
+        "booking_date": "2024-07-25",
+        "start_time": "2024-07-25T12:00:00.000Z",
+        "end_time": "2024-07-25T14:00:00.000Z",
+        "total_amount": 297.46,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B044",
+        "customer_id": "C029",
+        "car_id": "CAR692",
+        "booking_date": "2024-07-29",
+        "start_time": "2024-07-29T01:00:00.000Z",
+        "end_time": "2024-07-29T02:00:00.000Z",
+        "total_amount": 391.85,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B045",
+        "customer_id": "C039",
+        "car_id": "CAR184",
+        "booking_date": "2024-07-20",
+        "start_time": "2024-07-20T05:00:00.000Z",
+        "end_time": "2024-07-20T13:00:00.000Z",
+        "total_amount": 311.03,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B046",
+        "customer_id": "C033",
+        "car_id": "CAR766",
+        "booking_date": "2024-07-02",
+        "start_time": "2024-07-02T08:00:00.000Z",
+        "end_time": "2024-07-02T12:00:00.000Z",
+        "total_amount": 480.51,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B047",
+        "customer_id": "C009",
+        "car_id": "CAR552",
+        "booking_date": "2024-07-29",
+        "start_time": "2024-07-29T08:00:00.000Z",
+        "end_time": "2024-07-29T15:00:00.000Z",
+        "total_amount": 422.49,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B048",
+        "customer_id": "C025",
+        "car_id": "CAR690",
+        "booking_date": "2024-07-27",
+        "start_time": "2024-07-27T07:00:00.000Z",
+        "end_time": "2024-07-27T08:00:00.000Z",
+        "total_amount": 388.71,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B049",
+        "customer_id": "C013",
+        "car_id": "CAR107",
+        "booking_date": "2024-07-22",
+        "start_time": "2024-07-22T05:00:00.000Z",
+        "end_time": "2024-07-22T07:00:00.000Z",
+        "total_amount": 402.1,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B050",
+        "customer_id": "C026",
+        "car_id": "CAR681",
+        "booking_date": "2024-07-22",
+        "start_time": "2024-07-22T10:00:00.000Z",
+        "end_time": "2024-07-22T18:00:00.000Z",
+        "total_amount": 224.58,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B051",
+        "customer_id": "C029",
+        "car_id": "CAR906",
+        "booking_date": "2024-07-30",
+        "start_time": "2024-07-30T10:00:00.000Z",
+        "end_time": "2024-07-30T15:00:00.000Z",
+        "total_amount": 436.64,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B052",
+        "customer_id": "C045",
+        "car_id": "CAR473",
+        "booking_date": "2024-07-15",
+        "start_time": "2024-07-15T10:00:00.000Z",
+        "end_time": "2024-07-15T12:00:00.000Z",
+        "total_amount": 159.49,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B053",
+        "customer_id": "C028",
+        "car_id": "CAR320",
+        "booking_date": "2024-07-31",
+        "start_time": "2024-07-31T10:00:00.000Z",
+        "end_time": "2024-07-31T16:00:00.000Z",
+        "total_amount": 395.91,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B054",
+        "customer_id": "C038",
+        "car_id": "CAR411",
+        "booking_date": "2024-07-14",
+        "start_time": "2024-07-14T03:00:00.000Z",
+        "end_time": "2024-07-14T15:00:00.000Z",
+        "total_amount": 364.11,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B055",
+        "customer_id": "C022",
+        "car_id": "CAR159",
+        "booking_date": "2024-07-11",
+        "start_time": "2024-07-11T03:00:00.000Z",
+        "end_time": "2024-07-11T06:00:00.000Z",
+        "total_amount": 247.5,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B056",
+        "customer_id": "C043",
+        "car_id": "CAR541",
+        "booking_date": "2024-07-15",
+        "start_time": "2024-07-15T09:00:00.000Z",
+        "end_time": "2024-07-15T21:00:00.000Z",
+        "total_amount": 326.06,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B057",
+        "customer_id": "C050",
+        "car_id": "CAR745",
+        "booking_date": "2024-07-05",
+        "start_time": "2024-07-05T10:00:00.000Z",
+        "end_time": "2024-07-05T12:00:00.000Z",
+        "total_amount": 444.78,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B058",
+        "customer_id": "C039",
+        "car_id": "CAR552",
+        "booking_date": "2024-07-29",
+        "start_time": "2024-07-29T12:00:00.000Z",
+        "end_time": "2024-07-29T13:00:00.000Z",
+        "total_amount": 491.88,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B059",
+        "customer_id": "C050",
+        "car_id": "CAR727",
+        "booking_date": "2024-07-02",
+        "start_time": "2024-07-02T04:00:00.000Z",
+        "end_time": "2024-07-02T15:00:00.000Z",
+        "total_amount": 146.89,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B060",
+        "customer_id": "C021",
+        "car_id": "CAR229",
+        "booking_date": "2024-07-04",
+        "start_time": "2024-07-04T03:00:00.000Z",
+        "end_time": "2024-07-04T10:00:00.000Z",
+        "total_amount": 147.41,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B061",
+        "customer_id": "C044",
+        "car_id": "CAR587",
+        "booking_date": "2024-07-01",
+        "start_time": "2024-07-01T06:00:00.000Z",
+        "end_time": "2024-07-01T13:00:00.000Z",
+        "total_amount": 160.01,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B062",
+        "customer_id": "C003",
+        "car_id": "CAR230",
+        "booking_date": "2024-07-07",
+        "start_time": "2024-07-07T06:00:00.000Z",
+        "end_time": "2024-07-07T14:00:00.000Z",
+        "total_amount": 284.01,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B063",
+        "customer_id": "C025",
+        "car_id": "CAR129",
+        "booking_date": "2024-07-25",
+        "start_time": "2024-07-25T04:00:00.000Z",
+        "end_time": "2024-07-25T11:00:00.000Z",
+        "total_amount": 368.16,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B064",
+        "customer_id": "C028",
+        "car_id": "CAR175",
+        "booking_date": "2024-07-23",
+        "start_time": "2024-07-23T00:00:00.000Z",
+        "end_time": "2024-07-23T06:00:00.000Z",
+        "total_amount": 348.13,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B065",
+        "customer_id": "C019",
+        "car_id": "CAR454",
+        "booking_date": "2024-07-15",
+        "start_time": "2024-07-15T02:00:00.000Z",
+        "end_time": "2024-07-15T13:00:00.000Z",
+        "total_amount": 454.25,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B066",
+        "customer_id": "C005",
+        "car_id": "CAR296",
+        "booking_date": "2024-07-03",
+        "start_time": "2024-07-03T03:00:00.000Z",
+        "end_time": "2024-07-03T12:00:00.000Z",
+        "total_amount": 498.37,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B067",
+        "customer_id": "C018",
+        "car_id": "CAR272",
+        "booking_date": "2024-07-25",
+        "start_time": "2024-07-25T11:00:00.000Z",
+        "end_time": "2024-07-25T13:00:00.000Z",
+        "total_amount": 136.63,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B068",
+        "customer_id": "C009",
+        "car_id": "CAR909",
+        "booking_date": "2024-07-13",
+        "start_time": "2024-07-13T00:00:00.000Z",
+        "end_time": "2024-07-13T01:00:00.000Z",
+        "total_amount": 143.39,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B069",
+        "customer_id": "C021",
+        "car_id": "CAR338",
+        "booking_date": "2024-07-13",
+        "start_time": "2024-07-13T07:00:00.000Z",
+        "end_time": "2024-07-13T08:00:00.000Z",
+        "total_amount": 191.16,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B070",
+        "customer_id": "C049",
+        "car_id": "CAR646",
+        "booking_date": "2024-07-25",
+        "start_time": "2024-07-25T00:00:00.000Z",
+        "end_time": "2024-07-25T09:00:00.000Z",
+        "total_amount": 354.61,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B071",
+        "customer_id": "C019",
+        "car_id": "CAR991",
+        "booking_date": "2024-07-22",
+        "start_time": "2024-07-22T12:00:00.000Z",
+        "end_time": "2024-07-22T14:00:00.000Z",
+        "total_amount": 290.75,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B072",
+        "customer_id": "C044",
+        "car_id": "CAR615",
+        "booking_date": "2024-07-02",
+        "start_time": "2024-07-02T10:00:00.000Z",
+        "end_time": "2024-07-02T16:00:00.000Z",
+        "total_amount": 144.03,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B073",
+        "customer_id": "C029",
+        "car_id": "CAR275",
+        "booking_date": "2024-07-12",
+        "start_time": "2024-07-12T03:00:00.000Z",
+        "end_time": "2024-07-12T04:00:00.000Z",
+        "total_amount": 299.15,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B074",
+        "customer_id": "C022",
+        "car_id": "CAR452",
+        "booking_date": "2024-07-18",
+        "start_time": "2024-07-18T01:00:00.000Z",
+        "end_time": "2024-07-18T07:00:00.000Z",
+        "total_amount": 379.95,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B075",
+        "customer_id": "C002",
+        "car_id": "CAR708",
+        "booking_date": "2024-07-13",
+        "start_time": "2024-07-13T07:00:00.000Z",
+        "end_time": "2024-07-13T13:00:00.000Z",
+        "total_amount": 349.3,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B076",
+        "customer_id": "C045",
+        "car_id": "CAR349",
+        "booking_date": "2024-07-31",
+        "start_time": "2024-07-31T02:00:00.000Z",
+        "end_time": "2024-07-31T09:00:00.000Z",
+        "total_amount": 443.97,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B077",
+        "customer_id": "C026",
+        "car_id": "CAR302",
+        "booking_date": "2024-07-21",
+        "start_time": "2024-07-21T07:00:00.000Z",
+        "end_time": "2024-07-21T09:00:00.000Z",
+        "total_amount": 385.72,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B078",
+        "customer_id": "C041",
+        "car_id": "CAR130",
+        "booking_date": "2024-07-26",
+        "start_time": "2024-07-26T02:00:00.000Z",
+        "end_time": "2024-07-26T09:00:00.000Z",
+        "total_amount": 209.24,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B079",
+        "customer_id": "C040",
+        "car_id": "CAR405",
+        "booking_date": "2024-07-26",
+        "start_time": "2024-07-26T09:00:00.000Z",
+        "end_time": "2024-07-26T12:00:00.000Z",
+        "total_amount": 488.21,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B080",
+        "customer_id": "C016",
+        "car_id": "CAR661",
+        "booking_date": "2024-07-12",
+        "start_time": "2024-07-12T09:00:00.000Z",
+        "end_time": "2024-07-12T17:00:00.000Z",
+        "total_amount": 137.93,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B081",
+        "customer_id": "C027",
+        "car_id": "CAR590",
+        "booking_date": "2024-07-18",
+        "start_time": "2024-07-18T10:00:00.000Z",
+        "end_time": "2024-07-18T13:00:00.000Z",
+        "total_amount": 135.77,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B082",
+        "customer_id": "C043",
+        "car_id": "CAR869",
+        "booking_date": "2024-07-11",
+        "start_time": "2024-07-11T01:00:00.000Z",
+        "end_time": "2024-07-11T03:00:00.000Z",
+        "total_amount": 396.19,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B083",
+        "customer_id": "C011",
+        "car_id": "CAR191",
+        "booking_date": "2024-07-31",
+        "start_time": "2024-07-31T09:00:00.000Z",
+        "end_time": "2024-07-31T15:00:00.000Z",
+        "total_amount": 127.43,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B084",
+        "customer_id": "C007",
+        "car_id": "CAR435",
+        "booking_date": "2024-07-29",
+        "start_time": "2024-07-29T01:00:00.000Z",
+        "end_time": "2024-07-29T04:00:00.000Z",
+        "total_amount": 380.04,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B085",
+        "customer_id": "C037",
+        "car_id": "CAR455",
+        "booking_date": "2024-07-12",
+        "start_time": "2024-07-12T00:00:00.000Z",
+        "end_time": "2024-07-12T07:00:00.000Z",
+        "total_amount": 486.66,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B086",
+        "customer_id": "C033",
+        "car_id": "CAR477",
+        "booking_date": "2024-07-31",
+        "start_time": "2024-07-31T03:00:00.000Z",
+        "end_time": "2024-07-31T12:00:00.000Z",
+        "total_amount": 262.56,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B087",
+        "customer_id": "C045",
+        "car_id": "CAR838",
+        "booking_date": "2024-07-02",
+        "start_time": "2024-07-02T09:00:00.000Z",
+        "end_time": "2024-07-02T12:00:00.000Z",
+        "total_amount": 476.37,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B088",
+        "customer_id": "C003",
+        "car_id": "CAR835",
+        "booking_date": "2024-07-21",
+        "start_time": "2024-07-21T08:00:00.000Z",
+        "end_time": "2024-07-21T09:00:00.000Z",
+        "total_amount": 446.76,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B089",
+        "customer_id": "C049",
+        "car_id": "CAR406",
+        "booking_date": "2024-07-08",
+        "start_time": "2024-07-08T02:00:00.000Z",
+        "end_time": "2024-07-08T05:00:00.000Z",
+        "total_amount": 395.26,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B090",
+        "customer_id": "C022",
+        "car_id": "CAR686",
+        "booking_date": "2024-07-16",
+        "start_time": "2024-07-16T03:00:00.000Z",
+        "end_time": "2024-07-16T09:00:00.000Z",
+        "total_amount": 398.09,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B091",
+        "customer_id": "C003",
+        "car_id": "CAR686",
+        "booking_date": "2024-07-23",
+        "start_time": "2024-07-23T01:00:00.000Z",
+        "end_time": "2024-07-23T03:00:00.000Z",
+        "total_amount": 372.3,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B092",
+        "customer_id": "C027",
+        "car_id": "CAR714",
+        "booking_date": "2024-07-27",
+        "start_time": "2024-07-27T05:00:00.000Z",
+        "end_time": "2024-07-27T16:00:00.000Z",
+        "total_amount": 161.03,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B093",
+        "customer_id": "C022",
+        "car_id": "CAR167",
+        "booking_date": "2024-07-09",
+        "start_time": "2024-07-09T12:00:00.000Z",
+        "end_time": "2024-07-09T13:00:00.000Z",
+        "total_amount": 378.12,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B094",
+        "customer_id": "C046",
+        "car_id": "CAR651",
+        "booking_date": "2024-07-09",
+        "start_time": "2024-07-09T07:00:00.000Z",
+        "end_time": "2024-07-09T17:00:00.000Z",
+        "total_amount": 262.18,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B095",
+        "customer_id": "C023",
+        "car_id": "CAR629",
+        "booking_date": "2024-07-07",
+        "start_time": "2024-07-07T12:00:00.000Z",
+        "end_time": "2024-07-07T15:00:00.000Z",
+        "total_amount": 405.29,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B096",
+        "customer_id": "C016",
+        "car_id": "CAR437",
+        "booking_date": "2024-07-27",
+        "start_time": "2024-07-27T11:00:00.000Z",
+        "end_time": "2024-07-27T16:00:00.000Z",
+        "total_amount": 372.19,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B097",
+        "customer_id": "C030",
+        "car_id": "CAR534",
+        "booking_date": "2024-07-30",
+        "start_time": "2024-07-30T05:00:00.000Z",
+        "end_time": "2024-07-30T09:00:00.000Z",
+        "total_amount": 431.72,
+        "status": "cancelled"
+    },
+    {
+        "booking_id": "B098",
+        "customer_id": "C039",
+        "car_id": "CAR939",
+        "booking_date": "2024-07-19",
+        "start_time": "2024-07-19T08:00:00.000Z",
+        "end_time": "2024-07-19T12:00:00.000Z",
+        "total_amount": 468.39,
+        "status": "ongoing"
+    },
+    {
+        "booking_id": "B099",
+        "customer_id": "C029",
+        "car_id": "CAR166",
+        "booking_date": "2024-07-28",
+        "start_time": "2024-07-28T01:00:00.000Z",
+        "end_time": "2024-07-28T03:00:00.000Z",
+        "total_amount": 148.38,
+        "status": "completed"
+    },
+    {
+        "booking_id": "B100",
+        "customer_id": "C003",
+        "car_id": "CAR387",
+        "booking_date": "2024-07-26",
+        "start_time": "2024-07-26T11:00:00.000Z",
+        "end_time": "2024-07-26T23:00:00.000Z",
+        "total_amount": 261.17,
+        "status": "completed"
+    }
+]

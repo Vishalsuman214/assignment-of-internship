@@ -1,0 +1,82 @@
+[
+    {
+        "customer_id": "C001",
+        "name": "Grace Brown",
+        "email": "grace.brown@example.com",
+        "phone_number": "7419775736",
+        "signup_date": "2024-04-11",
+        "status": "inactive"
+    },
+    {
+        "customer_id": "C002",
+        "name": "Charlie Davis",
+        "email": "charlie.davis@example.com",
+        "phone_number": "4473315738",
+        "signup_date": "2024-01-12",
+        "status": "inactive"
+    },
+    {
+        "customer_id": "C003",
+        "name": "Bob Williams",
+        "email": "bob.williams@example.com",
+        "phone_number": "6149366402",
+        "signup_date": "2023-06-25",
+        "status": "active"
+    },
+    {
+        "customer_id": "C004",
+        "name": "Bob Wilson",
+        "email": "bob.wilson@example.com",
+        "phone_number": "7364068054",
+        "signup_date": "2024-02-20",
+        "status": "inactive"
+    },
+    {
+        "customer_id": "C005",
+        "name": "Eve Johnson",
+        "email": "eve.johnson@example.com",
+        "phone_number": "8575683857",
+        "signup_date": "2024-07-20",
+        "status": "inactive"
+    },
+    {
+        "customer_id": "C006",
+        "name": "Alice Miller",
+        "email": "alice.miller@example.com",
+        "phone_number": "7761179933",
+        "signup_date": "2024-04-14",
+        "status": "inactive"
+    },
+    {
+        "customer_id": "C007",
+        "name": "Diana Brown",
+        "email": "diana.brown@example.com",
+        "phone_number": "0529479643",
+        "signup_date": "2024-03-17",
+        "status": "active"
+    },
+    {
+        "customer_id": "C008",
+        "name": "Henry Brown",
+        "email": "henry.brown@example.com",
+        "phone_number": "1877077067",
+        "signup_date": "2023-04-20",
+        "status": "active"
+    },
+    {
+        "customer_id": "C009",
+        "name": "Charlie Miller",
+        "email": "charlie.miller@example.com",
+        "phone_number": "9179914410",
+        "signup_date": "2023-09-26",
+        "status": "active"
+    },
+    {
+        "customer_id": "C010",
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "phone_number": "9777045258",
+        "signup_date": "2023-02-05",
+        "status": "inactive"
+    }
+]

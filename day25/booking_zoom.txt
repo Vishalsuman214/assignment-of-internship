@@ -1,0 +1,182 @@
+# Initialize notebook
+# Databricks automatically creates a Spark session (spark)
+print("Notebook initialized with Spark session")
+
+
+
+
+raw_bookings_df = spark.read.option("mode", "PERMISSIVE").option("multiLine", True).json("/Volumes/workspace/default/skit_assignment/zoom_car_bookings.json")
+
+# Display schema and sample data
+display(raw_bookings_df)
+
+# Drop rows with nulls in critical fields
+cleaned_df = raw_bookings_df.na.drop(
+    subset=["booking_id", "customer_id", "car_id", "booking_date"]
+)
+
+# Print record counts before/after cleaning
+print(f"Original records: {raw_bookings_df.count()}")
+print(f"After null removal: {cleaned_df.count()}")
+
+
+
+from pyspark.sql.functions import to_date, to_timestamp, col
+
+# Convert string dates to proper types
+cleaned_df = (cleaned_df
+    .withColumn("booking_date", to_date(col("booking_date"), "yyyy-MM-dd"))
+    .withColumn("start_time", to_timestamp(col("start_time")))
+    .withColumn("end_time", to_timestamp(col("end_time")))
+)
+
+# Remove records with invalid dates
+cleaned_df = cleaned_df.filter(
+    col("booking_date").isNotNull() & 
+    col("start_time").isNotNull() & 
+    col("end_time").isNotNull()
+)
+
+
+from pyspark.sql.functions import when
+
+valid_statuses = ["completed", "cancelled", "pending"]
+
+cleaned_df = cleaned_df.withColumn(
+    "status",
+    when(col("status").isin(valid_statuses), col("status"))
+    .otherwise("invalid")
+)
+
+# Filter out invalid statuses
+cleaned_df = cleaned_df.filter(col("status") != "invalid")
+
+
+
+# Define Delta table path in Volumes
+delta_path = "dbfs:/Volumes/workspace/default/skit_assignment/staging_bookings_delta"
+
+# Write to Delta Lake (overwrite mode)
+cleaned_df.write.format("delta") \
+    .mode("overwrite") \
+    .save(delta_path)
+
+# Register as SQL table in a managed catalog
+
+
+
+
+
+
+# Identify invalid records
+invalid_records = raw_bookings_df.subtract(cleaned_df)
+
+# Save invalid records
+invalid_records.write.format("delta") \
+    .mode("overwrite") \
+    .save("/Volumes/workspace/default/skit_assignment/invalid_bookings")
+
+
+
+
+# Calculate metrics
+stats = {
+    "total_records": raw_bookings_df.count(),
+    "valid_records": cleaned_df.count(),
+    "invalid_records": raw_bookings_df.count() - cleaned_df.count(),
+    "null_removed": raw_bookings_df.count() - raw_bookings_df.na.drop(
+        subset=["booking_id", "customer_id", "car_id", "booking_date"]).count(),
+    "invalid_status_count": raw_bookings_df.filter(~col("status").isin(valid_statuses)).count()
+}
+
+# Display metrics
+print("=== Processing Summary ===")
+for k, v in stats.items():
+    print(f"{k.replace('_', ' ').title()}: {v}")
+
+
+
+from pyspark.sql.functions import to_timestamp, date_format
+
+# Convert to timestamp
+df_with_datetime = cleaned_df.withColumn(
+    "start_datetime", 
+    to_timestamp(col("start_time"))
+).withColumn(
+    "end_datetime", 
+    to_timestamp(col("end_time"))
+)
+
+# Extract date and time components
+transformed_df = df_with_datetime.withColumn(
+    "start_date", date_format(col("start_datetime"), "yyyy-MM-dd")
+).withColumn(
+    "start_time", date_format(col("start_datetime"), "HH:mm:ss")
+).withColumn(
+    "end_date", date_format(col("end_datetime"), "yyyy-MM-dd")
+).withColumn(
+    "end_time", date_format(col("end_datetime"), "HH:mm:ss")
+
+)
+
+
+
+from pyspark.sql.functions import (
+    col, to_timestamp, unix_timestamp,
+    concat_ws, lpad, floor
+)
+
+# 1. Convert to timestamps
+df = raw_bookings_df.withColumn(
+    "start_datetime", to_timestamp(col("start_time"))
+).withColumn(
+    "end_datetime", to_timestamp(col("end_time"))
+)
+
+# 2. Calculate duration in seconds
+df = df.withColumn(
+    "duration_seconds",
+    unix_timestamp("end_datetime") - unix_timestamp("start_datetime")
+)
+
+# 3. Format as HH:MM:SS
+final_df = df.withColumn(
+    "duration_formatted",
+    concat_ws(":",
+        lpad(floor(col("duration_seconds") / 3600), 2, "0"),
+        lpad(floor((col("duration_seconds") % 3600) / 60), 2, "0"),
+        lpad(floor(col("duration_seconds") % 60), 2, "0")
+    )
+)
+
+# 4. Add decimal hours version
+final_df = final_df.withColumn(
+    "duration_hours",
+    round(col("duration_seconds") / 3600, 2)
+)
+
+
+from pyspark.sql.functions import col
+
+# Ensure the correct data type for the columns
+final_df = final_df.withColumn("start_datetime", final_df["start_datetime"].cast("timestamp"))
+final_df = final_df.withColumn("end_datetime", final_df["end_datetime"].cast("timestamp"))
+
+# Save to Delta Lake
+output_path = "/Volumes/workspace/default/skit_assignment/processed_bookings"
+final_df.write \
+    .format("delta") \
+    .mode("overwrite") \
+    .save(output_path)
+
+
+# Check saved data
+display(
+    spark.read.format("delta")
+    .load(output_path)
+    .select("booking_id", "start_datetime", "start_time", "end_datetime", "end_time", "duration_hours")
+    .limit(5)
+)
+
+# Confirm table registration
+spark.sql("SHOW TABLES LIKE 'processed_bookings'").show()
